@@ -6,7 +6,6 @@
  */
 
 #include "Buch.h"
-#include "Medium.h"
 #include<string>
 using namespace std;
 

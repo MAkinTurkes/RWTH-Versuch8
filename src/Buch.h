@@ -25,7 +25,7 @@ public:
 	/*
 	 * @brief Die Ausgabefunktion
 	 *
-	 * Diese Funktion gibt alle Informationen eines Buchss auf der Konsole aus
+	 * Diese Funktion gibt alle Informationen eines Buches auf der Konsole aus
 	 */
 	virtual void ausgabe() const;
 
