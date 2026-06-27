@@ -21,7 +21,7 @@ void DVD::ausgabe(std::ostream& out) const
 
 bool DVD::ausleihen(Person person, Datum ausleihdatum)
 {
-	if((ausleihdatum - person.getGeburtsdatum()) < altersfreigabe)
+	if((ausleihdatum - person.getGeburtsdatum()) < altersfreigabe * 12)
 	{
 		cout << "Sie sind nicht alt genug!" << endl;
 		return false;
