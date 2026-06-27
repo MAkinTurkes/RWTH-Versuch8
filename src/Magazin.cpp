@@ -20,3 +20,16 @@ void Magazin::ausgabe() const
 	Medium::ausgabe();
 	cout << "Ausgabe: " << datumAusgabe << endl << "Sparte: " << sparte << endl;
 }
+
+bool Magazin::ausleihen(Person person, Datum ausleihdatum)
+{
+	if((ausleihdatum - datumAusgabe) < 1)
+	{
+		cout << "Die neueste Ausgbae kann nicht verliehen werden!" << endl;
+		return false;
+	}
+	else
+	{
+		return Medium::ausleihen(person, ausleihdatum);
+	}
+}
