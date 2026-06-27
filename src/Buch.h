@@ -27,7 +27,7 @@ public:
 	 *
 	 * Diese Funktion gibt alle Informationen eines Buches auf der Konsole aus
 	 */
-	virtual void ausgabe() const;
+	virtual void ausgabe(std::ostream& out) const;
 
 private:
 	/*

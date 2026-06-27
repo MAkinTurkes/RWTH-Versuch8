@@ -10,6 +10,8 @@
 
 #include "Datum.h"
 #include "Person.h"
+#include <ostream>
+#include <iostream>
 
 /*! \brief Basisklasse f�r s�mtliche Medien
 *
@@ -38,7 +40,7 @@ public:
      *
      * Funktion gibt alle Informationen eines Mediums auf der Konsole aus
      */
-    virtual void ausgabe() const;
+    virtual void ausgabe(std::ostream& out) const = 0;
 
     /*!
      * @brief Ausleihen-Funktion
@@ -62,6 +64,8 @@ public:
      * \return int: gibt die ID des Mediums zur�ck
      */
     unsigned int getID();
+
+    bool getStatus() const;
 
 protected:
     /*!
@@ -95,4 +99,7 @@ protected:
     Person personAusgeliehen;
 
 };
+
+std::ostream& operator << (std::ostream& out, const Medium& medium);
+
 #endif

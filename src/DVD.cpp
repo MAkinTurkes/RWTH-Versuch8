@@ -13,11 +13,10 @@ DVD::DVD(string initTitel, int initAltersfreigabe, string initGenre) : Medium(in
 {
 }
 
-void DVD::ausgabe() const
+void DVD::ausgabe(std::ostream& out) const
 {
-	Medium::ausgabe();
-
-	cout << "FSK: ab " << altersfreigabe << " Jahre" << endl << "Genre: " << genre << endl;
+	Medium::ausgabe(out);
+	out << "FSK: ab " << altersfreigabe << " Jahre" << endl << "Genre: " << genre << endl;
 }
 
 bool DVD::ausleihen(Person person, Datum ausleihdatum)

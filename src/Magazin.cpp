@@ -15,10 +15,10 @@ Magazin::Magazin(string initTitel, Datum initDatumAusgabe, string initSparte) : 
 }
 
 
-void Magazin::ausgabe() const
+void Magazin::ausgabe(std::ostream& out) const
 {
-	Medium::ausgabe();
-	cout << "Ausgabe: " << datumAusgabe << endl << "Sparte: " << sparte << endl;
+	Medium::ausgabe(out);
+	out << "Ausgabe: " << datumAusgabe << endl << "Sparte: " << sparte << endl;
 }
 
 bool Magazin::ausleihen(Person person, Datum ausleihdatum)

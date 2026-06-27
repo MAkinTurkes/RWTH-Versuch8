@@ -28,7 +28,7 @@ public:
 	 *
 	 * Diese Funktion gibt alle Informationen eines Magazins auf der Konsole aus
 	 */
-	virtual void ausgabe() const;
+	virtual void ausgabe(std::ostream& out) const;
 
 	/*
      * @brief Ausleihen-Funktion

@@ -29,7 +29,7 @@ public:
 	 *
 	 * Diese Funktion gibt alle Informationen einer DVD auf der Konsole aus
 	 */
-	virtual void ausgabe() const;
+	virtual void ausgabe(std::ostream& out) const;
 
 	/*
      * @brief Ausleihen-Funktion

@@ -41,6 +41,7 @@ void mediumEntfernen(std::vector<Medium*>& medien);
 void mediumAusleihen(std::vector<Medium*>& medien, Datum aktuellesDatum);
 void mediumZurueckgeben(std::vector<Medium*>& medien);
 void alleMedienAusgeben(std::vector<Medium*>& medien);
+void ausgelieheneMedienAusgeben(std::vector<Medium*>& medien);
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -52,7 +53,7 @@ void alleMedienAusgeben(std::vector<Medium*>& medien);
 
 int main()
 {
-    // Vektor mit allen Medien der B�cherei
+    // Vektor mit allen Medien der Buecherei
     std::vector<Medium*> medien;
 
     // aktuelles Datum
@@ -74,6 +75,7 @@ int main()
                   << "(3): Datenbank ausgeben" << std::endl
                   << "(4): Ein Medium verleihen" << std::endl
                   << "(5): Ein Medium zuruecknehmen" << std::endl
+				  << "(6): Ausgeliehene Medien ausgeben" << std::endl
                   << "(7): Beenden" << std::endl;
 
         // Einlesen der Abfrage
@@ -126,6 +128,12 @@ int main()
             {
                 mediumZurueckgeben(medien);
                 break;
+            }
+
+            case '6':
+            {
+            	ausgelieheneMedienAusgeben(medien);
+            	break;
             }
 
             case '7':
@@ -415,6 +423,47 @@ void alleMedienAusgeben(std::vector<Medium*>& medien)
     for (unsigned int index = 0; index < medien.size(); index++)
     {
         std::cout << "*************************************************************" << std::endl;
-        medien[index]->ausgabe();
+        medien[index]->ausgabe(std::cout);
     }
 }
+
+void ausgelieheneMedienAusgeben(std::vector<Medium*>& medien)
+{
+	std::cout << "Ausgeliehene Medien von der Bueceherei:" << std::endl;
+
+	for(unsigned int index = 0; index < medien.size(); index++)
+	{
+		if(medien[index]->getStatus())
+		{
+			std::cout << "*************************************************************" << std::endl;
+			std::cout << *medien[index] << std::endl;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

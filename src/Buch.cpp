@@ -13,8 +13,8 @@ Buch::Buch(string initTitel = "", string initAutor = "") : Medium(initTitel), au
 {
 }
 
-void Buch::ausgabe() const
+void Buch::ausgabe(std::ostream& out) const
 {
-	Medium::ausgabe();
-	cout << "Autor: " << autor << endl;
+	Medium::ausgabe(out);
+	out << "Autor: " << autor << endl;
 }
