@@ -10,12 +10,12 @@
 using namespace std;
 
 
-Magazin::Magazin(string initTitel, Datum initDatumAusgabe, string initSparte) : titel(initTitel), datumAusgabe(initDatumAusgabe), sparte(initSparte)
+Magazin::Magazin(string initTitel, Datum initDatumAusgabe, string initSparte) : Medium(initTitel), datumAusgabe(initDatumAusgabe), sparte(initSparte)
 {
 }
 
 
-virtual void Magazin::ausgabe() const
+void Magazin::ausgabe() const
 {
 	Medium::ausgabe();
 	cout << "Ausgabe: " << datumAusgabe << endl << "Sparte: " << sparte << endl;

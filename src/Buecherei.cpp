@@ -17,7 +17,7 @@
  * Bei setzen auf false ist nur die Basisklasse Medium vorhanden
  */
  
-#define UNTERKLASSENVORHANDEN false
+#define UNTERKLASSENVORHANDEN true
 
 #include <iostream>
 #include <string>

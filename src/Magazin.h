@@ -15,7 +15,7 @@ class Magazin : public Medium
 {
 public:
 	/*
-     * @brief Der Konstruktor fuer die Unterklasse Buch.
+     * @brief Der Konstruktor fuer die Unterklasse Magazin.
 	 *
 	 * @param initTitel Titel des Magazins
 	 * @param initDatumAusgabe Ausgabedatum des Magazins

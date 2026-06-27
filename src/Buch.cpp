@@ -9,11 +9,11 @@
 #include<string>
 using namespace std;
 
-Buch::Buch(string initTitel = "", string initAutor = "") : titel(initTitel), autor(initAutor)
+Buch::Buch(string initTitel = "", string initAutor = "") : Medium(initTitel), autor(initAutor)
 {
 }
 
-virtual void Buch::ausgabe() const
+void Buch::ausgabe() const
 {
 	Medium::ausgabe();
 	cout << "Autor: " << autor << endl;
