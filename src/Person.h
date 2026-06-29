@@ -15,7 +15,7 @@
  * @brief Klasse Person
  *
  * Die Klasse Person speichert alle relevanten Informationenen einer Person ab,
- * die für die Bücherei relevant sind, dies beinhaltet:
+ * die fï¿½r die Bï¿½cherei relevant sind, dies beinhaltet:
  *  - Name
  *  - Geburtsdatum
  *
@@ -28,8 +28,8 @@ public:
      *
      * Konstruktor der Klasse Person
      *
-     * \param std::string name: Name der Person, Default-Value ist ein leerer String
-     * \param Datum initGeburtsdatum: Geburtsdatum der Person, Default-Value ist das aktuelle Datum
+     * \param initName Name der Person, Default-Value ist ein leerer String
+     * \param initGeburtsdatum Geburtsdatum der Person, Default-Value ist das aktuelle Datum
      */
     Person(std::string initName = "", Datum initGeburtsdatum = Datum());
 
@@ -41,14 +41,14 @@ public:
     /*!
      * @brief Zugriffsfunktion auf den Namen der Person
      *
-     * \return std::string: gibt den Namen der Person zurück
+     * \return std::string: gibt den Namen der Person zurï¿½ck
      */
     std::string getName() const;
 
     /*!
      * @brief Zugriffsfunktion auf das Geburtsdatum der Person
      *
-     * \return Datum: gibt das Geburtsdautm der Person zurück
+     * \return Datum: gibt das Geburtsdautm der Person zurï¿½ck
      */
     Datum getGeburtsdatum() const;
 

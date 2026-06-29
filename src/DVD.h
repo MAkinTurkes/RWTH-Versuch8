@@ -15,39 +15,39 @@ using namespace std;
 class DVD : public Medium
 {
 public:
-	/*
+	/**
 	 * @brief Der Konstruktor fuer die Unterklasse DVD.
 	 *
 	 * @param initTitel Titel der DVD
-	 * @param initDatumAusgabe Ausgabedatum der DVD
-	 * @param initSparte Sparte der DVD
+	 * @param initAltersfreigabe Altersfreigabe der DVD
+	 * @param initGenre Genre der DVD
 	 */
 	DVD(string initTitel, int initAltersfreigabe, string initGenre);
 
-	/*
+	/**
 	 * @brief Die Ausgabefunktion
 	 *
 	 * Diese Funktion gibt alle Informationen einer DVD auf der Konsole aus
 	 */
 	virtual void ausgabe(std::ostream& out) const;
 
-	/*
+	/**
      * @brief Ausleihen-Funktion
      *
-     * @param Person Person die das Medium ausleihen moechte
-     * @param Datum Datum an dem das Medium ausgeliehen wird
+     * @param person Person die das Medium ausleihen moechte
+     * @param ausleihdatum Datum an dem das Medium ausgeliehen wird
      *
      * @return true,  wenn die Ausleihbeschr�nkungen erfuellt sind und das Medium ausgeliehen werden kann. false, wenn die Ausleihbeschraenkungen nicht erfuellt sind und das Medium nicht ausgeliehen werden kann
      */
 	virtual bool ausleihen(Person person, Datum ausleihdatum);
 
 private:
-	/*
+	/**
 	 * @brief Altersfreigabe der DVD
 	 */
 	int altersfreigabe;
 
-	/*
+	/**
 	 * @brief Genre der DVD
 	 */
 	string genre;

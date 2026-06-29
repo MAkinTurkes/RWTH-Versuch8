@@ -14,7 +14,7 @@ using namespace std;
 class Magazin : public Medium
 {
 public:
-	/*
+	/**
      * @brief Der Konstruktor fuer die Unterklasse Magazin.
 	 *
 	 * @param initTitel Titel des Magazins
@@ -23,30 +23,30 @@ public:
 	 */
 	Magazin(string initTitel, Datum initDatumAusgabe, string initSparte);
 
-	/*
+	/**
 	 * @brief Die Ausgabefunktion
 	 *
 	 * Diese Funktion gibt alle Informationen eines Magazins auf der Konsole aus
 	 */
 	virtual void ausgabe(std::ostream& out) const;
 
-	/*
+	/**
      * @brief Ausleihen-Funktion
      *
-     * @param Person Person die das Medium ausleihen moechte
-     * @param Datum Datum an dem das Medium ausgeliehen wird
+     * @param person Person die das Medium ausleihen moechte
+     * @param ausleihdatum Datum an dem das Medium ausgeliehen wird
      *
      * @return true,  wenn die Ausleihbeschr�nkungen erfuellt sind und das Medium ausgeliehen werden kann. false, wenn die Ausleihbeschraenkungen nicht erfuellt sind und das Medium nicht ausgeliehen werden kann
      */
 	virtual bool ausleihen(Person person, Datum ausleihdatum);
 
 private:
-	/*
+	/**
 	 * @brief Ausgabedatum des Magazins
 	 */
 	Datum datumAusgabe;
 
-	/*
+	/**
 	 * @brief Sparte des Magazins
 	 */
 	string sparte;

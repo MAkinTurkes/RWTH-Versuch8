@@ -26,7 +26,7 @@ public:
      *
      * Konstruktor der Klasse Medium
      *
-     * \param std::string initTitel: Titel des Mediums
+     * \param initTitel: Titel des Mediums
      */
     Medium(std::string initTitel);
 
@@ -45,8 +45,8 @@ public:
     /*!
      * @brief Ausleihen-Funktion
      *
-     * \param Person person: Person die das Medium ausleihen m�chte
-     * \param Datum ausleihdatum: Datum an dem das Medium ausgeliehen wird
+     * \param person Person die das Medium ausleihen m�chte
+     * \param ausleihdatum Datum an dem das Medium ausgeliehen wird
      *
      * \return bool: true,  wenn die Ausleihbeschr�nkungen erf�llt sind und das Medium ausgeliehen werden kann
      *               false, wenn die Ausleihbeschr�nkungen nicht erf�llt sind und das Medium nicht ausgeliehen werden kann
@@ -65,6 +65,9 @@ public:
      */
     unsigned int getID();
 
+    /**
+     * @brief Gibt den Status des Mediums zurueck.
+     */
     bool getStatus() const;
 
 protected:
@@ -100,6 +103,14 @@ protected:
 
 };
 
+/**
+ * @brief Ueberladung vom <<-Operator fuer ostream.
+ *
+ * Ueberladung vom <<-Operator fuer ostream, sodass Medium-Objekte und bzw Medium-Unterklassen direkt bei der Ausgabe benutzt werden (z.B. std::cout << neueMedium).
+ * @param out Die Referenz zum std::cout.
+ * @param medium Das Medium-Objekt, das an den Konsol geprintet werden wird.
+ * @return Eine Referenz zum std::cout. Damit kann man mehr als eine Ausgabe verketten.
+ */
 std::ostream& operator << (std::ostream& out, const Medium& medium);
 
 #endif
